@@ -17,12 +17,29 @@ public class Exercise {
         // Use input.charAt(i) to get each character
         // Build up a new String by concatenating
 
+        StringBuilder reversed = new StringBuilder();
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed.append(input.charAt(i));
+        }
+
+        System.out.println(reversed);
 
         // TODO: Count vowels
         // Hint: convert to lowercase first, then check each char
         // "aeiou".indexOf(ch) >= 0 means it's a vowel
 
+        int vowels = 0;
+        String toLower =  input.toLowerCase();
 
+        for (int i = 0; toLower.length() > i; i++) {
+            char c = toLower.charAt(i);
+            if ("aeiou".indexOf(c) >= 0) {
+                vowels++;
+            }
+        }
+
+        System.out.println("Number of vowels: " + vowels);
         sc.close();
     }
 }
