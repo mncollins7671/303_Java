@@ -1,3 +1,5 @@
+package OperatorsLab;
+
 public class BitwiseOperatorsDemo {
     public static void main(String[] args) {
         int x = 58; //111010

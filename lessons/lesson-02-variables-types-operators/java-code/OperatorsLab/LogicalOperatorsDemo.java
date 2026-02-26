@@ -1,3 +1,5 @@
+package OperatorsLab;
+
 public class LogicalOperatorsDemo {
     public static void main(String[] args) {
         boolean x = true;

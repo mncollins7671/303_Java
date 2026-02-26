@@ -1,3 +1,5 @@
+package OperatorsLab;
+
 public class ArithmeticOperatorsDemo {
     public static void main(String[] args) {
         int x, y = 10, z = 5;

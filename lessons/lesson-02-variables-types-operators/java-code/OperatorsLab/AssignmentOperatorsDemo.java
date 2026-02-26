@@ -1,3 +1,5 @@
+package OperatorsLab;
+
 public class AssignmentOperatorsDemo {
     public static void main(String[] args) {
         int j, k;
