@@ -11,21 +11,39 @@ public class Exercise {
 
         // TODO 1: Calculate average
 
+        int gradeCount = 0;
+        double scoreTotal = 0.0;
+
+        for (double score : grades) {
+            gradeCount++;
+            scoreTotal = scoreTotal + score;
+        }
+
+        double average = scoreTotal / gradeCount;
 
         // TODO 2: Print all grades above average
         // System.out.println("Grades above average:");
 
+        for (int i = 0; i < grades.length; i++) {
+            if (grades[i] > average) {
+                System.out.println(grades[i]);
+            }
+        }
 
         // TODO 3: Replace grade at index 2 with 100.0 (valid)
-        // replaceGrade(grades, 2, 100.0);
+        ExerciseSolution.replaceGrade(grades, 2, 100.0);
 
         // TODO 3b: Try replacing at index 20 (invalid — should print error)
-        // replaceGrade(grades, 20, 100.0);
+        ExerciseSolution.replaceGrade(grades, 20, 100.0);
     }
 
     // TODO: Write this method
-    // public static void replaceGrade(double[] grades, int index, double newGrade) {
-    //     // Validate index first! (guard clause)
-    //     // Then replace
-    // }
+    public static void replaceGrade(double[] grades, int index, double newGrade) {
+        // Validate index first! (guard clause)
+        if (index < 0 || index >= grades.length) {
+            System.out.println("Error: " + index + " not found.");
+        }
+        // Then replace
+        grades[index] = newGrade;
+    }
 }
