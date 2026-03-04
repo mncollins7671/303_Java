@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 // EXERCISE: Score Processor (SBA-style Array ↔ List manipulation)
 //
@@ -18,19 +19,36 @@ public class Exercise {
 
         // TODO Step 1: Convert to ArrayList<Integer>
 
+        ArrayList<Integer> scoresList = new ArrayList<>();
+        for (int s : scores) scoresList.add(s);
 
         // TODO Step 2: Remove scores below 60
         // HINT: loop backward when removing!
 
+        for (int i = scoresList.size() - 1; i >= 0; i--){
+            if (scoresList.get(i) < 60) {
+                scoresList.remove(i);
+            }
+        }
+        System.out.println("Scores above 60: " + scoresList);
 
         // TODO Step 3: Add 5-point curve (cap at 100)
         // HINT: use Math.min(score + 5, 100)
 
+        for (int i = 0; i < scoresList.size(); i++){
+                scoresList.set(i, Math.min(scoresList.get(i) +5, 100));
+        }
+
+        System.out.println("After curve: " + scoresList);
 
         // TODO Step 4: Convert back to int[]
 
+        int[] passing = new int[scoresList.size()];
+        for (int i = 0; i <scoresList.size(); i++){
+            passing[i] = scoresList.get(i);
+        }
 
         // TODO Step 5: Print result
-        // System.out.println("Final: " + Arrays.toString(result));
+         System.out.println("Final: " + Arrays.toString(passing));
     }
 }
