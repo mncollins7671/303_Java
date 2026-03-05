@@ -27,5 +27,6 @@ public class Exercise {
         // TODO: Step 4 — Collect back to list & print
 
         // TODO: Step 5 — Use reduce to sum the curved scores & print
+
     }
 }
