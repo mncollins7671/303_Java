@@ -23,10 +23,24 @@ public class basics {
 
         //Part 4
         int a = 58;
-        int b = 61;
-
+        double b = 61;
+        double ab = b / a;
+        System.out.println(ab);
 
         //Part 5
+        double c = 87.2;
+        double d = 187.6;
+        double dc = d / c;
+        int toInt = (int) dc;
+        System.out.println(toInt);
+
+        //Part 6
+        int x = 5;
+        int y = 6;
+        double q = (double) y / x;
+        System.out.println(q);
+
+        //Part 7
 
     }
 }
